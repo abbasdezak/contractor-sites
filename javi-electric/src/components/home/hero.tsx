@@ -17,7 +17,7 @@ const chips = [
 
 export function Hero() {
   return (
-    <section className="dark bg-background text-foreground bg-grid relative isolate overflow-hidden">
+    <section className="dark bg-background text-foreground texture-grid relative isolate overflow-hidden">
       <div
         className="bg-primary/25 absolute -top-48 -right-24 -z-10 size-[36rem] rounded-full blur-3xl"
         aria-hidden="true"
@@ -111,7 +111,7 @@ export function Hero() {
               {heroReview.author}
               <span className="text-muted-foreground font-normal">
                 {" "}
-                · Verified on Google
+                · via Google
               </span>
             </figcaption>
           </figure>

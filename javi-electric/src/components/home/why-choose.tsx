@@ -8,7 +8,7 @@ import { Stars } from "@/components/site/stars";
 
 export function WhyChoose() {
   return (
-    <section className="dark bg-background text-foreground bg-grid relative isolate overflow-hidden py-20 sm:py-28">
+    <section className="dark bg-background text-foreground texture-grid relative isolate overflow-hidden py-20 sm:py-28">
       <div className="bg-primary/15 absolute top-1/3 -left-40 -z-10 size-[28rem] rounded-full blur-3xl" aria-hidden="true" />
       <div className="container-site grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">

@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/site/section-heading";
 
 export function AreasTeaser() {
   return (
-    <section className="bg-background bg-grid-light relative py-20 sm:py-28">
+    <section className="bg-background texture-grid-light relative py-20 sm:py-28">
       <div className="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
           <SectionHeading
@@ -40,7 +40,7 @@ export function AreasTeaser() {
           </div>
         </div>
 
-        <div className="dark bg-background text-foreground bg-grid relative isolate mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl border shadow-2xl">
+        <div className="dark bg-background text-foreground texture-grid relative isolate mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl border shadow-2xl">
           <div className="bg-primary/20 absolute top-1/2 left-1/2 -z-10 size-3/4 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" aria-hidden="true" />
           <svg viewBox="0 0 400 400" className="absolute inset-0 size-full" aria-hidden="true">
             {[60, 110, 160, 195].map((r, i) => (

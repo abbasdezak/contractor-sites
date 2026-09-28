@@ -19,7 +19,7 @@ export function PageHero({
   children?: React.ReactNode;
 }) {
   return (
-    <section className="dark bg-background text-foreground bg-grid relative isolate overflow-hidden">
+    <section className="dark bg-background text-foreground texture-grid relative isolate overflow-hidden">
       <div
         className="bg-primary/20 absolute -top-40 right-0 -z-10 size-[32rem] rounded-full blur-3xl"
         aria-hidden="true"

@@ -27,7 +27,7 @@ const featured = featuredSlugs
 
 export function ProjectsTeaser() {
   return (
-    <section className="dark bg-background text-foreground bg-grid relative isolate overflow-hidden py-20 sm:py-28">
+    <section className="dark bg-background text-foreground texture-grid relative isolate overflow-hidden py-20 sm:py-28">
       <div className="bg-primary/15 absolute -right-40 -bottom-40 -z-10 size-[30rem] rounded-full blur-3xl" aria-hidden="true" />
       <div className="container-site">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">

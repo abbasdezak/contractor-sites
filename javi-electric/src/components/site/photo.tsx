@@ -50,7 +50,7 @@ export function Photo({
       role="img"
       aria-label={alt}
       className={cn(
-        "bg-navy-900 bg-grid relative isolate overflow-hidden",
+        "bg-navy-900 texture-grid relative isolate overflow-hidden",
         className
       )}
     >

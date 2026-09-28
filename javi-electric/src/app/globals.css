@@ -141,13 +141,13 @@
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
   }
   /* Subtle circuit-grid texture for dark sections. */
-  .bg-grid {
+  .texture-grid {
     background-image:
       linear-gradient(to right, oklch(1 0 0 / 5%) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(1 0 0 / 5%) 1px, transparent 1px);
     background-size: 44px 44px;
   }
-  .bg-grid-light {
+  .texture-grid-light {
     background-image:
       linear-gradient(to right, oklch(0.18 0.03 263 / 5%) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(0.18 0.03 263 / 5%) 1px, transparent 1px);

@@ -91,7 +91,7 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      <section className="dark bg-background text-foreground bg-grid py-16 sm:py-20">
+      <section className="dark bg-background text-foreground texture-grid py-16 sm:py-20">
         <div className="container-site">
           <SectionHeading
             eyebrow="Patterns"

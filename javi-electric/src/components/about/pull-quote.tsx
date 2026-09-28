@@ -14,10 +14,10 @@ export function PullQuote({
   className?: string;
 }) {
   return (
-    <figure className={cn("relative", className)}>
+    <figure className={cn("relative pt-10 sm:pt-12", className)}>
       <span
         aria-hidden="true"
-        className="font-display text-primary/30 absolute -top-6 -left-1 text-9xl leading-none font-extrabold select-none"
+        className="font-display text-primary/30 absolute -top-4 -left-1 text-9xl leading-none font-extrabold select-none"
       >
         &ldquo;
       </span>

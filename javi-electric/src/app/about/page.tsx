@@ -114,6 +114,7 @@ export default function AboutPage() {
             <Photo
               alt="Javier Carcamo and his son Javi, the family behind Javi Electric"
               label="Javi & Javi"
+              icon="Users"
               className="aspect-[4/3] rounded-2xl shadow-xl"
             />
           </div>
@@ -121,7 +122,7 @@ export default function AboutPage() {
       </section>
 
       {/* Pull quote */}
-      <section className="dark bg-background text-foreground bg-grid py-16 sm:py-24">
+      <section className="dark bg-background text-foreground texture-grid py-16 sm:py-24">
         <div className="container-site">
           <PullQuote
             className="mx-auto max-w-4xl"
@@ -183,7 +184,7 @@ export default function AboutPage() {
       </section>
 
       {/* License & credentials */}
-      <section className="dark bg-background text-foreground bg-grid py-16 sm:py-24">
+      <section className="dark bg-background text-foreground texture-grid py-16 sm:py-24">
         <div className="container-site grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <SectionHeading

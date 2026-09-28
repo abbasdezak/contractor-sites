@@ -250,7 +250,7 @@ export default async function ServicePage({
 
       {/* Reviews */}
       {serviceReviews.length > 0 && (
-        <section className="dark bg-background text-foreground bg-grid py-16 sm:py-24">
+        <section className="dark bg-background text-foreground texture-grid py-16 sm:py-24">
           <div className="container-site">
             <SectionHeading
               eyebrow="Customer reviews"

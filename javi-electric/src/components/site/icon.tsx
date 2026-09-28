@@ -15,6 +15,7 @@ import {
   ShieldCheck,
   Siren,
   Sparkles,
+  Users,
   Wrench,
   Zap,
   type LucideIcon,
@@ -39,6 +40,7 @@ const icons: Record<string, LucideIcon> = {
   ShieldCheck,
   Siren,
   Sparkles,
+  Users,
   Wrench,
   Zap,
 };
