@@ -41,7 +41,7 @@ export function SiteHeader() {
           <div className="text-muted-foreground flex items-center gap-5">
             <span className="inline-flex items-center gap-1.5">
               <ShieldCheck className="text-primary size-3.5" aria-hidden="true" />
-              Licensed &amp; insured · {site.license.label}
+              Licensed electrical contractor · {site.license.label}
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Star className="fill-primary text-primary size-3.5" aria-hidden="true" />
