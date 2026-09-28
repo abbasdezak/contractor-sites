@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * Javi Electric design system
+ * ---------------------------
+ * shadcn/ui token contract (background, foreground, primary, ...) on top of
+ * Tailwind v4. Brand = "electric amber" on deep "circuit navy".
+ *
+ * Any subtree can opt into the dark palette with the `dark` class
+ * (e.g. <section className="dark bg-background text-foreground">), which is
+ * how the hero, CTA bands and footer get their navy look while still using
+ * the same shadcn components.
+ */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand scale, usable as bg-brand-500, text-navy-900, etc. */
+  --color-brand-50: oklch(0.985 0.03 95);
+  --color-brand-100: oklch(0.96 0.07 92);
+  --color-brand-200: oklch(0.92 0.12 90);
+  --color-brand-300: oklch(0.88 0.16 87);
+  --color-brand-400: oklch(0.84 0.17 82);
+  --color-brand-500: oklch(0.8 0.17 76);
+  --color-brand-600: oklch(0.7 0.16 65);
+  --color-brand-700: oklch(0.57 0.14 58);
+  --color-navy-50: oklch(0.97 0.008 255);
+  --color-navy-100: oklch(0.93 0.015 255);
+  --color-navy-200: oklch(0.86 0.025 255);
+  --color-navy-300: oklch(0.72 0.035 257);
+  --color-navy-400: oklch(0.56 0.04 258);
+  --color-navy-500: oklch(0.44 0.045 259);
+  --color-navy-600: oklch(0.36 0.045 260);
+  --color-navy-700: oklch(0.29 0.04 261);
+  --color-navy-800: oklch(0.23 0.035 262);
+  --color-navy-900: oklch(0.18 0.03 263);
+  --color-navy-950: oklch(0.14 0.025 264);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --animate-marquee: marquee 40s linear infinite;
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+
+  --background: oklch(0.99 0.003 90);
+  --foreground: oklch(0.18 0.03 263);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.03 263);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.03 263);
+  --primary: oklch(0.8 0.17 76);
+  --primary-foreground: oklch(0.18 0.03 263);
+  --secondary: oklch(0.955 0.008 255);
+  --secondary-foreground: oklch(0.23 0.035 262);
+  --muted: oklch(0.955 0.008 255);
+  --muted-foreground: oklch(0.47 0.03 259);
+  --accent: oklch(0.96 0.07 92);
+  --accent-foreground: oklch(0.23 0.035 262);
+  --destructive: oklch(0.58 0.22 27);
+  --border: oklch(0.91 0.012 255);
+  --input: oklch(0.89 0.014 255);
+  --ring: oklch(0.8 0.17 76);
+}
+
+.dark {
+  --background: oklch(0.18 0.03 263);
+  --foreground: oklch(0.97 0.008 255);
+  --card: oklch(0.23 0.035 262);
+  --card-foreground: oklch(0.97 0.008 255);
+  --popover: oklch(0.23 0.035 262);
+  --popover-foreground: oklch(0.97 0.008 255);
+  --primary: oklch(0.84 0.17 82);
+  --primary-foreground: oklch(0.18 0.03 263);
+  --secondary: oklch(0.29 0.04 261);
+  --secondary-foreground: oklch(0.97 0.008 255);
+  --muted: oklch(0.29 0.04 261);
+  --muted-foreground: oklch(0.76 0.03 257);
+  --accent: oklch(0.29 0.04 261);
+  --accent-foreground: oklch(0.97 0.008 255);
+  --destructive: oklch(0.65 0.2 25);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.84 0.17 82);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-balance;
+  }
+  p {
+    @apply text-pretty;
+  }
+}
+
+@layer utilities {
+  /* Standard page gutter + max width. */
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  /* Subtle circuit-grid texture for dark sections. */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(1 0 0 / 5%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(1 0 0 / 5%) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .bg-grid-light {
+    background-image:
+      linear-gradient(to right, oklch(0.18 0.03 263 / 5%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.18 0.03 263 / 5%) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
